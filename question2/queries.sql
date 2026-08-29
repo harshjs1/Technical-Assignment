@@ -1,6 +1,5 @@
 -- Question 2A
 -- Count how many distinct Acacia plant types exist in the taxonomy table.
--- Genus Acacia is identified by the taxonomic string ending with "; Acacia."
 SELECT COUNT(DISTINCT species) AS acacia_plant_types
 FROM taxonomy
 WHERE tax_string LIKE '%; Acacia.';
@@ -21,7 +20,7 @@ LIMIT 1;
 
 -- Question 2C
 -- List families with maximum DNA sequence length greater than 1,000,000,
--- sorted by length descending, returning page 9 (rows 121-135).
+-- sorted by length descending.
 SELECT
     f.rfam_acc AS family_accession,
     f.rfam_id AS family_name,
